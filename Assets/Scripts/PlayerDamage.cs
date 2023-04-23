@@ -6,6 +6,7 @@ public class PlayerDamage : MonoBehaviour
 {
     public GameObject playerCollider;
     public Transform enemies;
+    public float damage = 25F;
 
     // Update is called once per frame
     void Update()
@@ -16,7 +17,7 @@ public class PlayerDamage : MonoBehaviour
             {
                 if (child.GetComponent<DetectColliderEnter>().inSwordCollisionRange == true)
                 {
-                    Destroy(child.gameObject);
+                    child.GetComponent<Health>().TakeDamage(damage);
                 }
             }
         }
