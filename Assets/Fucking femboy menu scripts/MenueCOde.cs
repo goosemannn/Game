@@ -12,16 +12,9 @@ public class MenueCOde : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        userInput1.onEndEdit.AddListener(delegate { OnEndEdit(userInput1); });
+        
     }
-    private void OnEndEdit(InputField input)
-    {
-        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
-        {
-            OnSubmitCLick();
-            
-        }
-    }
+    
 
     // Update is called once per frame
     void Update()
