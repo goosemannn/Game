@@ -656,6 +656,7 @@ GameObject:
   - component: {fileID: 1105302477}
   - component: {fileID: 1105302476}
   - component: {fileID: 1105302481}
+  - component: {fileID: 1105302482}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Untagged
@@ -792,7 +793,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -129708323
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
@@ -818,6 +819,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1508764558}
+--- !u!114 &1105302482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105302474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4414b9c8afa2b624ba66431ec27d2cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  AbleToAttackPlayer: 1
 --- !u!1 &1145444626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,7 +1226,7 @@ GameObject:
   - component: {fileID: 1508764565}
   m_Layer: 3
   m_Name: PlayerBody
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1273,7 +1288,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -129708323
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.023584902, g: 1, b: 0.040084284, a: 1}
@@ -1936,6 +1951,7 @@ GameObject:
   - component: {fileID: 2027649554}
   - component: {fileID: 2027649555}
   - component: {fileID: 2027649556}
+  - component: {fileID: 2027649557}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1997,7 +2013,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -129708323
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
@@ -2098,6 +2114,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1508764558}
+--- !u!114 &2027649557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027649549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4414b9c8afa2b624ba66431ec27d2cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  AbleToAttackPlayer: 1
 --- !u!1 &2059666873
 GameObject:
   m_ObjectHideFlags: 0
@@ -2224,6 +2254,7 @@ GameObject:
   - component: {fileID: 2079159563}
   - component: {fileID: 2079159567}
   - component: {fileID: 2079159568}
+  - component: {fileID: 2079159569}
   m_Layer: 0
   m_Name: Enemy3
   m_TagString: Untagged
@@ -2347,7 +2378,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -129708323
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
@@ -2386,3 +2417,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1508764558}
+--- !u!114 &2079159569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079159561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4414b9c8afa2b624ba66431ec27d2cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  AbleToAttackPlayer: 1
