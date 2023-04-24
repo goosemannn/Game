@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float movespeed = .01F;
+    public bool left = false;
 
     // Update is called once per frame
     void Update()
@@ -12,10 +13,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey("d"))
         {
             transform.Translate(new Vector3(.01F, 0, 0));
+            left = false;
         }
         if (Input.GetKey("a"))
         {
             transform.Translate(new Vector3(-.01F, 0, 0));
+            left = true;
         }
         if (Input.GetKey("w"))
         {

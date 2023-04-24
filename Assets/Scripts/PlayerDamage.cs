@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerDamage : MonoBehaviour
 {
     public GameObject playerCollider;
+    public GameObject player;
     public Transform enemies;
     public float damage = 25F;
 
@@ -15,7 +16,11 @@ public class PlayerDamage : MonoBehaviour
         {
             foreach (Transform child in enemies)
             {
-                if (child.GetComponent<DetectColliderEnter>().inSwordCollisionRange == true)
+                if (child.GetComponent<DetectColliderEnter>().inSwordLeftCollisionRange == true && player.GetComponent<PlayerMovement>().left == true)
+                {
+                    child.GetComponent<Health>().TakeDamage(damage);
+                }
+                else if (child.GetComponent<DetectColliderEnter>().inSwordRightCollisionRange == true && player.GetComponent<PlayerMovement>().left == false)
                 {
                     child.GetComponent<Health>().TakeDamage(damage);
                 }

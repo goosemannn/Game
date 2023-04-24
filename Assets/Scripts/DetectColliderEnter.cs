@@ -4,22 +4,48 @@ using UnityEngine;
 
 public class DetectColliderEnter : MonoBehaviour
 {
-	public bool inSwordCollisionRange = false;
+	public bool inPlayerFollowArea = false;
+
+	public bool inSwordLeftCollisionRange = false;
+	public bool inSwordRightCollisionRange = false;
 
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.gameObject.tag == "SwordCollider")
 		{
-			inSwordCollisionRange = true;
+			if (collision.gameObject.layer == 6)
+			{
+				inSwordLeftCollisionRange = true;
+			}
+			else if (collision.gameObject.layer == 7)
+			{
+				inSwordRightCollisionRange = true;
+			}
 		}
+		else if (collision.gameObject.tag == "PlayerFollowArea")
+		{
+			inPlayerFollowArea = true;
+		}
+
 	}
 
 	void OnTriggerExit2D(Collider2D collision)
 	{
 		if (collision.gameObject.tag == "SwordCollider")
 		{
-			inSwordCollisionRange = false;
+			if (collision.gameObject.layer == 6)
+			{
+				inSwordLeftCollisionRange = false;
+			}
+			else if (collision.gameObject.layer == 7)
+			{
+				inSwordRightCollisionRange = false;
+			}
+		}
+		else if (collision.gameObject.tag == "PlayerFollowArea")
+		{
+			inPlayerFollowArea = false;
 		}
 	}
 }
