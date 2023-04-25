@@ -13,12 +13,10 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey("d"))
         {
             transform.Translate(new Vector3(.01F, 0, 0));
-            left = false;
         }
         if (Input.GetKey("a"))
         {
             transform.Translate(new Vector3(-.01F, 0, 0));
-            left = true;
         }
         if (Input.GetKey("w"))
         {
@@ -27,6 +25,14 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey("s"))
         {
             transform.Translate(new Vector3(0, -.01F, 0));
+        }
+        if (Input.mousePosition.x > Screen.width / 2.0f)
+        {
+            left = false;
+        }
+        else
+        {
+            left = true;
         }
     }
 }
